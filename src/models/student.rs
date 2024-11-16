@@ -5,7 +5,7 @@ use std::error::Error;
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
 pub struct Student {
     pub name: String,
-    pub(crate) score: i32,
+    pub score: i32,
     pub grade: char,
 }
 
