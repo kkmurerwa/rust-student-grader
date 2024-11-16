@@ -6,4 +6,4 @@ David Brown; 54
 Emma Taylor; 36
 Olivia Garcia; 41
 Mia Martinez; 27
-Jones Holt, 19
+Jones Holt; 19

@@ -15,8 +15,9 @@ pub fn run() {
             Ok(student) => {
                 students.push(student);
             }
-            Err(_) => {
-                println!("Unable to create student.");
+            Err(msg) => {
+                println!("{}", msg);
+                process::exit(1);
             }
         };
     }

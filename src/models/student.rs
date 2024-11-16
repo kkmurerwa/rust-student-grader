@@ -1,5 +1,6 @@
 use std::fmt;
 use std::cmp::Ord;
+use std::error::Error;
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
 pub struct Student {
@@ -15,9 +16,9 @@ impl fmt::Display for Student {
 }
 
 impl Student {
-    pub fn build(args: &[String]) -> Result<Student, &'static str>{
+    pub fn build(args: &[String]) -> Result<Student, Box< dyn Error>>{
         if args.len() < 2 {
-            return Err("Not enough arguments");
+            return Err(Box::from("We encountered an error while creating the student."));
         }
 
         let name = args[0].clone();
